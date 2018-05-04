@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="92px" height="38px" viewBox="0 0 92 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Resource-网址导航" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-120.000000, -27.000000)">
+        <g id="Group" transform="translate(120.000000, 27.000000)" fill="#FFFFFF">
+            <g id="Page-1">
+                <polygon id="Fill-1" points="11.8746 0.0002 0.3756 17.0622 11.8746 12.9382 22.9376 17.0622"></polygon>
+                <polygon id="Fill-2" points="11.5002 28.6877 0.3752 22.2497 11.6872 37.9997 23.0002 22.2497"></polygon>
+                <polygon id="Fill-3" points="0 19.4996 11.656 26.1256 22.937 19.4996 11.656 14.6876"></polygon>
+            </g>
+            <text id="ethereum-classic" font-family="HelveticaNeue, Helvetica Neue" font-size="14" font-weight="normal">
+                <tspan x="33.058" y="16">ethereum</tspan>
+                <tspan x="41.115" y="32">classic</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
