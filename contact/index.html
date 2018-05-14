@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ETC incubator</title>
+    <link href="/dist/css/vendor.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/css/bundle-contact.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar-wrapper"> 
+            <div class="container">
+                <nav class="navbar navbar-expand-sm navbar-light">
+                    <a class="navbar-brand" href="/"><img src="/dist/resources/images/etc.svg" alt="" class="header-logo"><span>Ethereum Classic Labs</span></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                            <a class="nav-link" href="/programs/">PROGRAMS</a>
+                            </li>
+                            <li class="nav-item active">
+                            <a class="nav-link" href="/contact/">CONTACT</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                            <div class="language_box language_box-off">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAUCAYAAACeXl35AAAAAXNSR0IArs4c6QAAAYVJREFUSA3tVj0vBFEUPW8+1spqFBKNbIJEQaJQKBQ6jVah8Uf8gC38AZ2/IFFotBoSsYKSQqGR0FixM/NmnGu9N2xmNusN3d5k8u67X+eeO+9lRj0DS3WgEaNYjD0sdg9tlfx3oKMI2G4Ay1FJqvLoGAMyRiMrCRrCXGNMB7jyFJAk3JhHT1CnV/bCLpsjXgvQ7MrEuK6CJf1bSanVdwB/vkeGAdCPHMUBFR/wprmKsYIEJjdcBYI1oLbF2isEOge6h1yfgPSa9nUy3QRed5khFB3FAib3LLpNAosEJpPoiEAvOaH4jDhtolQAkx7tSFMy0QTVJwS65Xrzs7g3yUYWvmdI+u/FMlTU9CXf1z5H2mQhnkwjcjj9GU5ggwfpwljdVgsoo4pPe0X0XV7MmwJCvr/o+AtM5z4XzY60KFmYqXGymxWFT0UwwcgZyq5PPjEegLe9PkeF7UCGFeqWpo4AS0fj6hiN1HVypXkBL3cgl1E+Tf8pgtEllnzxB/5i/FUT5hfjAyZ5a5V8rgYdAAAAAElFTkSuQmCC" alt="">
+                                <svg width="13px" height="6px" viewBox="0 0 13 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="C_homepage-down" transform="translate(-1307.000000, -32.000000)" fill="#FFFFFF"><g id="Group-3" transform="translate(120.000000, 7.000000)"><polygon id="Triangle-2" transform="translate(1193.500000, 28.000000) scale(1, -1) translate(-1193.500000, -28.000000) " points="1193.5 25 1200 31 1187 31"></polygon></g></g></g></svg>
+                                <ul>
+                                <li><a href="/en"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAVCAYAAABR915hAAAAAXNSR0IArs4c6QAABIFJREFUSA29ln9MU1cUx7/v9QElraUUbXQCljgj4BDjlv3A8nOQbZplC1CRJcuMuIF2mIy56fjhxgRGEfEHVYebEbNkE12yf6ZTQcqYmmEmDB3GiG4G534Ag9IWaCnvvd338BFoS4Rk2U1v7nu333PO/dx77smjukqrx7VvvkHRSiX6rCN8/iHLcGN7zzhmaH2n89T9pWWUs/MXUSFfFYOQkkJeu77OOoMJ0laHMwdTFyvGPztK82Nj8M/ZxNHc9ev0H5vyaFlHO708TCM7/0m6ymxM0SjkfhqA8uqaeXJa5nJRrM0mdpnLSQlzvrRKub/mSG685tjCXtVIUZEsMGwxFfV5LTU/4TmavrW5wB2kfxZ33i3CvQ8rwNkdML4Sixt1ryM5NnQmiEfOC7Yd7zyF+K8OYuDbc9CVfoCl1bvBhARD2FHaUGMZ3klFQ2sqg729E11ZGzHUegURi4JwsSoDZmMyFHLmkYEkgVLuhyO5epx4rBe2nYWQ65ZgRUM9NC+mon9oFBvKzyK74juX6PFky200/xyIT7cVY3XbeZE+5KU0hG3PF+nXPq1DTk0jLJ2/S/59jgLl0bWhcB0ilNYh6D4uhOaF50Xt163dMJqb0WsdFd/J2Uw0YSJ9z0XsEOgrd8PeIdFfnkYv6T1HkXLR34SyCPKIh5QkqERpKDszGVSw9drDhu9vE7Kp9MXiNoW/t02k53neMyZomkL8lwcwYLN7UW6tbUYf2WLPRj3ot7NqRcAk+VSBjDj041iSsOTHMKBkMvHvbuN22K5eE59VzzyJZeZqcC7XpEZY3JibBct5L1IwGrC7OOrW+x9xjNtFXM++OW7cxDg5Q6Ex6iAoY6Jnb0yUbj85T3WkvMyxNvucAs8pig+xTKXifW6xD+1/PsUEREaCdjnn5Hj07m9gHQ7RRkZKbeDSiDnZc/JAUIN2J6tW+k6umbz5Sq6ZtL7m/7GN8ozWUCdkSfBUAanTqMxZg7fWxYCiKAw2WnB/rxmMah6iGo5PlYrPQhYLOpIruF9di8GmFoS8ug7nHo/Dji9+wrDT7WkzzLhZbtpkyqpQHCtIg25hEMYHregx7YfV8gO0Wen4MTYRkT5uCEeuzTeX7yAzYZl4j9VJevRU7kPclTZcNRqRe+FPr6o3mVxCjT2cn4wmU4YYVKDsWr8Ro913sWCvCQUjOhhMTdMWOfVFqExZpAuVSp2SgOjTJ6CIjoS9qAT1Cx6Q+r0GQgypiZXLi5Ks1tpyCdoNGWhbmYgtBy75rD6SE2k8ReqxUM8P56eI9BEVuxCcmiTump7QX3t7K/Ia/xI1NBEFTlJeeEhJslZbU4WC4SXINDXOKqgUXCiPEj35sJigP1UPxYooOIp3oX4+WdjmOH8mO3m5PyudpUD5mgFtT8Rjy/7ZUUoBPUcv+vKSCXqym/qgTj/abmnFzewc3vnrPV67bw9f4AhnM6ua2D6bkyWp6tW5iRTmKZqe6BTNk5ospLWXVvBhKD/LZpWf4XrJZ5UqUc9HnjzOB6wktyUpKUnuudr/4/1f2NkDjgzOc54AAAAASUVORK5CYII=" alt=""></a></li>
+                                </ul>
+                            </div>  
+                            </li> -->
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- <div class="header_content">
+                <p>Growing Startups and Ecosystem on </p>
+                <p class="sl">Ethereum Classic Blockchain</p>
+                <a href="" class="apply">Apply Now</a>
+            </div> -->
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>We would like to hear from you</h1>
+            <div class="subscribe">
+                <div id="mc_embed_signup">
+                    <form action="https://ethereumclassiclabs.us18.list-manage.com/subscribe/post?u=1a60101399301a1b81facd680&amp;id=75c1fba077" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                            <div class="signup_top">
+                                <div class="mc-field-group">
+                                    <label for="mce-EMAIL">Email Address </label>
+                                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                                </div>
+                                <div class="mc-field-group">
+                                    <label for="mce-MMERGE6">Full Name </label>
+                                    <input type="text" value="" name="MMERGE6" class="required" id="mce-MMERGE6">
+                                </div>
+                            </div>
+                            <div class="mc-field-group">
+                                <label for="mce-MMERGE7">Company Name </label>
+                                <input type="text" value="" name="MMERGE7" class="" id="mce-MMERGE7">
+                            </div>
+                            <div class="mc-field-group">
+                                <label for="mce-MMERGE8">Message </label>
+                                <textarea type="text" value="" name="MMERGE8" class="required" id="mce-MMERGE8"></textarea>
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9644099b61116bf98ab3340b7_b2d554f00a" tabindex="-1" value=""></div>
+                                <div class="clear"><input type="submit" value="Send message" name="subscribe" id="mc-embedded-subscribe" class="apply"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="faq">
+                <h1>—— FAQ</h1>
+                <ul>
+                    <li>
+                        <h3>Do you invest in the companies that go through the Program?</h3>
+                        <p>We invest in all companies that take part in the Program. Companies receive an investment of $50,000 - $150,000 for 9% of their equity.</p>
+                    </li>
+                    <li>
+                        <h3>When shall I apply?</h3>
+                        <p>Ethereum Classic Labs have a rolling admission and invite startups to submit applications throughout the year.</p>
+                    </li>
+                    <li>
+                        <h3>How will the program be select?</h3>
+                        <p>We will read every application. Promising founders and interesting idea are the bonus points in selection.</p>
+                    </li>
+                    <li>
+                        <h3>What will I get if I have been admitted to the program?</h3>
+                        <p>Successful applicants are provided with office space within our modern, open plan working space in either downtown San Francisco or Singapore for a period of three months. This gives startups the opportunity to work collaboratively with selected blockchain industry leaders and help shape the business model under expert guidance. At the end of each program, a demo day will be held which is attended by our network of investors which can help to secure another round of funding for the applicants. </p>
+                    </li>
+                    <li>
+                        <h3>I’ve applied and haven’t heard back. When will I get an answer?</h3>
+                        <p>We receive thousands of applications and we will read each application. We will try to respond to applicant but it will take several weeks to finish the process.</p>
+                    </li>
+                    <li>
+                        <h3>Can I apply again if I was rejected previously?</h3>
+                        <p>Yes, of course. It is often the case that most successful founders got rejection on their first try. Anytime when you keep making progress and have a new idea, you are always encouraged to re-apply to our program.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="logo">
+                <h3>
+                    ETC Labs
+                </h3>
+            </div>
+            <div class="other">
+                <ul>
+                    <li><a href="/programs/">Programs</a></li>
+                    <li><a href="/contact/">FAQs</a></li>
+                    <li><a href="/terms/">Terms of use</a></li>
+                </ul>
+            </div>
+            <div class="links">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="https://www.etcdevteam.com/" target="_blank">https://www.etcdevteam.com/</a></li>
+                    <li><a href="https://iohk.io/projects/ethereum-classic/#team" target="_blank">https://iohk.io/projects/ethereum-classic/#team</a></li>
+                    <li><a href="https://dexaran.github.io/ICO/" target="_blank">https://dexaran.github.io/ICO/</a></li>   
+                    <li><a href="https://dcg.co/" target="_blank">https://dcg.co/</a></li>                    
+                    <li><a href="https://www.digitalfinancegroup.net/" target="_blank">https://www.digitalfinancegroup.net/</a></li>                    
+                    <li><a href="https://www.hcm-foxconn.com/zh/" target="_blank">https://www.hcm-foxconn.com/zh/</a></li>                    
+                                     
+                </ul>
+            </div>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Ethereum Classic Labs</li>
+                    <li><a href="https://www.google.com/maps/place/71+Powell+St,+San+Francisco,+CA+94102/@37.7853567,-122.4103171,17z/data=!3m1!4b1!4m5!3m4!1s0x80858085f8219263:0x4a889b8eb0c9dbb7!8m2!3d37.7853567!4d-122.4081284" target="_blank"><img src="/dist/resources/images/locate.svg" alt=""><span>71 Powell Street</span></a></li>
+                    <li><a href="https://www.google.com/maps/place/71+Powell+St,+San+Francisco,+CA+94102/@37.7853567,-122.4103171,17z/data=!3m1!4b1!4m5!3m4!1s0x80858085f8219263:0x4a889b8eb0c9dbb7!8m2!3d37.7853567!4d-122.4081284" target="_blank"><span>San Francisco, CA 94105</span></a></li>                    
+                    <li><a href="https://www.google.com/maps/place/Maxwell+Rd,+Marina+One+Show+Gallery,+%E6%96%B0%E5%8A%A0%E5%9D%A1/@1.2670889,103.8515389,13.92z/data=!4m13!1m7!3m6!1s0x31da1911a247f301:0xc10d8244ada0d84c!2zTWF4d2VsbCBSZCwgTWFyaW5hIE9uZSBTaG93IEdhbGxlcnksIOaWsOWKoOWdoQ!3b1!8m2!3d1.2776331!4d103.8531473!3m4!1s0x31da1911a247f301:0xc10d8244ada0d84c!8m2!3d1.2776331!4d103.8531473" target="_blank"><img src="/dist/resources/images/locate.svg" alt=""><span>Marina One, Singapore </span></a></li>
+                    <li>For general/press inquiries: </li>
+                    <li>info@ethereumclassiclabs.com</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="/dist/js/vendor.min.js" ></script>
+<script src="/dist/js/bundle.min.js"></script>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script type='text/javascript'>
+(function($) {
+window.fnames = new Array(); 
+window.ftypes = new Array();
+fnames[0]='EMAIL';
+ftypes[0]='email';
+fnames[1]='FNAME';
+ftypes[1]='text';
+fnames[2]='LNAME';
+ftypes[2]='text';
+fnames[3]='ADDRESS';
+ftypes[3]='address';
+fnames[4]='PHONE';
+ftypes[4]='phone';
+}(jQuery));
+var $mcj = jQuery.noConflict(true);
+</script>
+</html>
