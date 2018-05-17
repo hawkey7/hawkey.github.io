@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>以太经典</title>
+
+    <!-- Bootstrap -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/dist/css/vendor.min.css" rel="stylesheet">
+    <link href="/dist/css/bundle-establish.min.css?v=1526539415614" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header id="header">
+      <div class="navbar-wrapper">
+        <div class="container">
+          <nav class="navbar navbar-expand-sm navbar-light">
+              <a class="navbar-brand" href="/kr/"><img src="/dist/resources/images/toplogo.svg" alt="" class="header-logo"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/news/?lang=ko">뉴스</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/forums-kr/">게시판</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/kr/resource/">소스</a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="language_box language_box-off">
+                      <img src="/dist/resources/images/korea.jpeg" alt="">
+                      <svg width="13px" height="6px" viewBox="0 0 13 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="C_homepage-down" transform="translate(-1307.000000, -32.000000)" fill="#FFFFFF"><g id="Group-3" transform="translate(120.000000, 7.000000)"><polygon id="Triangle-2" transform="translate(1193.500000, 28.000000) scale(1, -1) translate(-1193.500000, -28.000000) " points="1193.5 25 1200 31 1187 31"></polygon></g></g></g></svg>
+                      <ul>
+                        <li><a href="/purse/"><img src="/dist/resources/images/ch.png" alt=""></a></li>
+                        <li><a href="/jp/purse/"><img src="/dist/resources/images/jp.jpeg" alt=""></a></li>
+                      </ul>
+                    </div>  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+        </div>
+      </div>
+    </header>
+    <main class="purse">
+        <div class="container">
+            <div class="top">
+              소스출처
+            </div>
+            <div class="content-wrapper">
+              <div class="purse_title"><a href="http://classicetherwallet.com" target="_blank">http://classicetherwallet.com</a> - 의 내용은github에서 제공합니다.</div>  
+              <div class="purse_content">
+                <h3>ClassicEtherWallet</h3>
+                <p>ClassicEtherWallet은 JavaScript언어를 바탕으로 오픈소스 ETC지갑 클라이언트 툴입니다.</p>
+                <ul>
+                  <li>공식사이트：<a href="http://classicetherwallet.com" target="_blank">http://classicetherwallet.com</a></li>
+                  <li>Github 링크：<a href="https://ethereumproject.github.io/etherwallet/" target="_blank">https://ethereumproject.github.io/etherwallet/</a></li>
+                </ul>
+                <h3>목표</h3>
+                <p>ClassicEtherWallet의 개발은 일반 유저들이 명령 행 클라이언트를 사용 시 엄청난 불편함을 겪고 있기 때문입니다. 이번 개발의 목적은 아래와 같습니다.</p>
+                <ul>
+                  <li>고객의 지갑파일과 암호키파일 도입</li>
+                  <li>완전한 지갑 클라이언트 생성 및 원시 암호키 제공, JSON파일과 계좌의 종이버전</li>
+                  <li>대규모로 지갑 생성</li>
+                  <li>거래 생성 및 발송</li>
+                  <li>대다수 사람들이 완전한 클라이언트 운행 없이도 일상적인 임무완성을 할 수 있게 도움.</li>
+                </ul>
+                <p>2번째 버전은 이러한 희망사항을 위하여 아래와 같은 특성을 제공합니다.</p>
+                <ul>
+                  <li>오프라인 거래 생성 및 발송함으로써 암호키의 안전성 확보</li>
+                  <li>표준 거래발송 선택사항 중 자체정의한 gas와 데이터 포함</li>
+                  <li>Angular로 재코딩하여 더 쉽게 업데이트 진행 및 보수가 가능함</li>
+                  <li>다른 사례의 토큰 크라우드 펀딩 지원(Digix，Slock.it 등)</li>
+                  <li>geth/Mist암호화폐 저장격식(V3)을 맞추기 위한 새로운 암호화 방법을 사용하여, ClassicEtherWallet과 Mist사이에서 자산이동이 더 쉬워짐.</li>
+                  <li>오프라인 거래페이지의 QR코드로 기기간 이동이 더 간편해짐</li>
+                  <li>미리 정의한 거래페이지로 연결이 가능한 맞춤식 링크생성이 가능하며, 페이지에는 발송주소 및 금액, 데이터와 gas가 기제되어 있어서, 유저는 지갑을 잠금해재한 후 발송버튼만 클릭하면 됨.</li>
+                </ul>
+                <h3>개발자</h3>
+                <p>프로젝트에 참여하고 싶으시면 아래 내용 확인 부탁드립니다.</p>
+                <ul>
+                  <li>Chrome의 확장 프로그램과ClassicEtherWallet.com은 모두 동일한 코드 라이브러리로 편집되었으며 해당 코드는 app파일에서 찾을수 있으며 dist와 chrome-extension파일은 변경 불가함.</li>
+                  <li>저희는 Angular과 Bootstrap을 사용하고 있음. 2016년 4월 전에는jQuery와Bootstrap을 사용했었으나 이러한 변경으로 여러 부분에서 새로운 세팅을 찾아볼 수 있음.</li>
+                  <li>Mercury 가지는 현재 개발중의 활발한 가지임. 개발완성 후 저희는dist파일을 gh페이지로 보내어ClassicEtherWallet.com을 업데이트한 후 운행할 것임. </li>
+                  <li>저희는 npm/gulp을 사용하여 코팅을 진행합니다. 코딩 시 많은 내용이 연관됨.</li>
+                  <li>예전의 노드 세팅은json_relay_node（node.js）와json_relay_php（PHP）에서 찾을 수 있음. $40인linnode사례에는 아주 많은 자원들을 참고할 수 있으며, 공공노드를 시작 및 운행할 수 있음.</li>
+                </ul>
+                <p>그럼 시작해 볼까요</p>
+                <ul>
+                  <li>npm install운행부터 시작함.</li>
+                  <li>npm run dev 을 운행합니다. Gulp는 모든것을 코딩하며HTML、JS와 CSS의 변화를 관찰함.</li>
+                  <li>npm run dist를 운행하여 배치함.</li>
+                </ul>
+                <p>파일 구조</p>
+                <ul>
+                  <li>Fonts와 images는 각자의 파일로 이동됨. 이미지 또는 폰트 추가 시gulp을 다시 운행해야 함. 그 이유는 이 두 격식의 파일은 자동으로 코딩이 되지 않기 때문임.</li>
+                  <li>Includes 파일은 페이지 조각 또는 페이지 자체로 볼 수 있음. 이러한 파일은 아주 선명함. 여기서 대부분의 프론트 관련 변경을 진행할 수 있음.</li>
+                  <li>layouts파일은 페이지 자체임. 거의 모든 페이지를 하나의 가장 큰 페이지로 코딩함. 네비게이션바도 여기서 찾아볼 수 있음. 예를 들면:
+                    <ul>
+                      <li>index.html 는 https://ethereumproject.github.io/etherwallet/ 제시함.</li>
+                      <li>cx-wallet.html는Chrome확장프로그램의 주요페이지임.</li>
+                      <li>embedded.html 는https://ethereumproject.github.io/etherwallet/embedded.html. 을 제시함.</li>
+                    </ul>
+                  </li>
+                  <li>사용방법: @@if (site === 'cx' ) { ... } 과 @@if (site === 'mew' ) { ... }는ClassicEtherWallet.com에서Chrome확장프로그램의 노출을 제어할 수 있음. sendTransaction.tpl로 그 행위를 관찰할 수 있으며 전자는Chrome확장 프로그램으로만 코딩되나 후자는ClassicEtherWallet.com으로만 코딩됨.</li>
+                  <li>embedded.html은 지갑 생성 후 제3자 사이트로 삽입시킴.</li>
+                  <li>scripts/directives/walletDecryptDrtv.js에서 지갑 암호해제 명령을 진행하며 이는 여러 페이지에 노출됨.</li>
+                  <li>목차안내는scripts/services/globalServices.js에 있으며 이 파일을 통해 각 목차항목이 어느 사이트에 노출되는지를 결정함. </li>
+                  <li>2016년 9월까지,거의 모든.tpl 파일 중의 카피는 단지 페이스홀더로만 존재하였으나 이는Angular-translate로 대체되었다. 만약 카피본을 수정하고 싶을 경우,  scripts/translations/en.js 파일에서 진행하여야 함. 또한 수정한 내용을 파일의 가장 윗부분으로 옮겨야 필요할 경우 이에 대하여 번역을 진행함.</li>
+                  <li>Styles는 자체 정의 파일과 목차프로그램이 포함되어 있으며 이는 반드시 다시 만들어야 함!</li>
+                </ul>
+                <h3>문의사항</h3>
+                <p>위 내용 외에 기타 특징 또는 운행 중 에러발생 시 연락 부탁드립니다.</p>
+              </div>
+            </div>
+        </div>
+    </main>
+    <div class="footer kr-footer">
+      <div class="container">
+        <img src="/dist/resources/images/bottomlogo.svg" alt="" class="footer-logo">
+        <div class="subscribe">
+          <div id="mc_embed_signup">
+            <form action="https://ethereumclassicasia.us18.list-manage.com/subscribe/post?u=cf36498d3fc32e7bc9dfc6052&amp;id=d898a0a72e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+                <div class="mc-field-group">
+                  <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="email">
+                </div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>                
+              </div>
+              <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+            </form>
+          </div>
+        </div>
+        <div class="footer-content row justify-content-start">
+          <div class="col-sm-3 resource-links">
+            <h4>소스</h4>
+            <ul>
+              <li><a href="javascript:;" id="whitePaper">백서</a></li>
+              <li><a href="javascript:;" id="guide">ETC 가이드</a></li>  
+              <li><a href="javascript:;" id="faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 friend-links">
+            <h4>관련 링크</h4>
+            <ul>
+              <!-- <li><a href="#" target="_blank">ETC INCUBATOR</a></li> -->
+              <li><a href="https://www.etcdevteam.com" target="_blank">ETCDEV</a></li>
+              <li><a href="https://etccooperative.org" target="_blank">ECC</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3 social-links">
+            <ul>
+              <li>
+                <a href="https://open.kakao.com/o/gUNOv0K" target="_blank">Kakao Talk</a>
+              </li>
+              <li>
+                <a href="javascript:;">@etckorea</a>
+              </li>
+              <!-- <li>
+                <a href="https://t.me/joinchat/GqAqlRC9hD5bVy65DuHcfg" target="_blank">Telegram</a>
+              </li> -->
+              <li>
+                <a href="https://github.com/ethereumproject" target="_blank">Github</a>
+              </li>
+              <!-- <li>
+                <a href="javascript:;" class="qrcode">위챗공중계정</a>
+                <div class="qr-dropdown">
+                  <img src="/dist/resources/images/qrcode.jpeg" alt="">
+                </div>
+              </li>
+              <li>
+                <a href="javascript:;" class="qrcode">위챗그룹도우미</a>
+                <div class="qr-dropdown">
+                  <img src="/dist/resources/images/qrcode2.jpeg" alt="">
+                </div>
+              </li>
+              <li>
+                <a href="javascript:;">공식 QQ 그룹 769408114</a>
+              </li>
+              <li>
+                <a href="http://t.me/etczh" target="_blank">Telegram</a>
+              </li>
+              <li>
+                <a href="https://github.com/ethereumproject/explorer" target="_blank">Github</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/dist/js/vendor.min.js" ></script>
+  <script src="/dist/js/bundle-resource.min.js?v=1526539415614" ></script>
+  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+  <script type='text/javascript'>
+  (function($) {
+    window.fnames = new Array(); 
+    window.ftypes = new Array();
+    fnames[0]='EMAIL';
+    ftypes[0]='email';
+    fnames[1]='FNAME';
+    ftypes[1]='text';
+    fnames[2]='LNAME';
+    ftypes[2]='text';
+    fnames[3]='ADDRESS';
+    ftypes[3]='address';
+    fnames[4]='PHONE';
+    ftypes[4]='phone';
+  }(jQuery));
+  var $mcj = jQuery.noConflict(true);
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118864224-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-118864224-1');
+  </script>
+</html>

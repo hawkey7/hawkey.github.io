@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>以太经典</title>
+
+    <!-- Bootstrap -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/dist/css/vendor.min.css" rel="stylesheet">
+    <link href="/dist/css/bundle-establish.min.css?v=1526539415614" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header id="header">
+      <div class="navbar-wrapper">
+        <div class="container">
+          <nav class="navbar navbar-expand-sm navbar-light">
+              <a class="navbar-brand" href="/jp/"><img src="/dist/resources/images/toplogo.svg" alt="" class="header-logo"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/news/?lang=ja">ニュース</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/forums-jp/">ホームページ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/jp/resource/">資源</a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="language_box language_box-off">
+                      <img src="/dist/resources/images/jp.jpeg" alt="">
+                      <svg width="13px" height="6px" viewBox="0 0 13 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="C_homepage-down" transform="translate(-1307.000000, -32.000000)" fill="#FFFFFF"><g id="Group-3" transform="translate(120.000000, 7.000000)"><polygon id="Triangle-2" transform="translate(1193.500000, 28.000000) scale(1, -1) translate(-1193.500000, -28.000000) " points="1193.5 25 1200 31 1187 31"></polygon></g></g></g></svg>
+                      <ul>
+                        <li><a href="/establish/"><img src="/dist/resources/images/ch.png" alt=""></a></li>
+                        <li><a href="/kr/establish/"><img src="/dist/resources/images/korea.jpeg" alt=""></a></li>                        
+                      </ul>
+                    </div>  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+        </div>
+      </div>
+    </header>
+    <main class="establish">
+        <div class="container">
+          <!-- <h4>什么是ERC20</h4>
+          <p>可以把ERC20简单理解成以太坊上的一个代币协议，所有基于以太坊开发的代币合约都遵守这个协议。遵守这些协议的代币我们可以认为是标准化的代币，而标准化带来的好处是兼容性好。这些标准化的代币可以被各种以太坊钱包支持，用于不同的平台和项目。说白了，你要是想在以太坊上发行代币融资，必须要遵守ERC20标准。</p> -->
+          <p>標準的なERC20インターフェースはこうなる</p>
+          <pre class="code">
+contract ERC20 { 
+    function name() constant returns (string name) 
+    function symbol() constant returns (string symbol) 
+    function decimals() constant returns (uint8 decimals) 
+    function totalSupply() constant returns (uint totalSupply); 
+    function balanceOf(address _owner) constant returns (uint balance); 
+    function transfer(address _to, uint _value) returns (bool success); 
+    function transferFrom(address _from, address _to, uint _value) returns (bool success); 
+    function approve(address _spender, uint _value) returns (bool success); 
+    function allowance(address _owner, address _spender) constant returns (uint remaining); 
+    event Transfer(address indexed _from, address indexed _to, uint _value); 
+    event Approval(address indexed _owner, address indexed _spender, uint _value); 
+}</pre>
+          <h4><b>name</b></h4>
+          <p>ERC20トークンの名前に戻る、例"My test token"。</p>
+          <h4><b>symbol</b></h4>
+          <p>トークンの略称に戻る、例：MTT、これは一般的なトークン取引所でも見える名前だ。</p>
+          <h4><b>decimals</b></h4>
+          <p>Tokenを使用する小数点以下数位に戻り。例えば3に設定すれば、表示0.001を支持するということ。</p>
+          <h4><b>totalSupply</b></h4>
+          <p>tokenの総供給量に戻る。</p>
+          <h4><b>balanceOf</b></h4>
+          <p>あるアドレス（アカウント口座）の口座残高に戻る</p>
+          <h4><b>transfer</b></h4>
+          <p>トークン契約の使用者アドレスから_valueの数量tokenアドレスを_toまでに転送し、Transfer事件を触発させなければならない。</p>
+          <h4><b>transferFrom</b></h4>
+          <p>アドレス_fromから、数量_valueのtokenを_toアドレスまで発送して、Transfer事件を触発させなければならない。 </p>
+          <p>transferFrom方法は、契約のある代理人がtokenを転送することを許可する。条件はfromアカウントが必ずapproveを経過すること。このあとの例を挙げて説明する。</p>
+          <h4><b>approve</b></h4>
+          <p>_spenderはお客様のアカウントを何度も取り戻すことを許可され、最高に_value金額に達する。この関数を再度呼び出すと、_valueが現在の残量をカバーする</p>
+          <h4><b>allowance</b></h4>
+          <p>_spenderに戻ると、いつも通り_ownerから金額の引き出しを許可される。</p>
+          <p>後ろの3つの方法は理解しにくいので説明を補足する。</p>
+          <p>approveは、認定された第三者（例えばあるサービス契約）が送信者アカウントからトークンを転送する。そしてtransferFrom()関数に通して具体な転送操作を行うこと。</p>
+          <p>アカウントAは1000枚ETCを持っている、アカウントBが自由に、自分の100枚ETCの使用権を与える、その過程は：</p>
+          <ul>
+            <li>アカウントAは、以下の形でapprove関数approve(B,100)を呼び出す。</li>
+            <li>アカウントBは、この100枚ETCの10枚をアカウントCにあげるなら、transferFrom(A, C, 10)を呼び出す。</li>
+            <li>allowance(A, B)を呼び出しによる、アカウントBはAの何個ぐらいtokenを呼び出すのがチェックできる</li>
+          </ul>
+          <!-- <p>另外，我推荐这篇文章，对这部分概念讲解的比较清楚。</p> -->
+          <!-- <p><a href="https://mp.weixin.qq.com/s/foM1QWvsqGTdHxHTmjczsw" target="_blank"><i>https://mp.weixin.qq.com/s/foM1QWvsqGTdHxHTmjczsw</i></a>（编者按：亦见文末超链接《科普 | 释放阻塞的以太坊交易》）</p>
+          <p>后面两个是事件，事件是为了获取日志方便提供的。前者是在代币被转移时触发，后者是在调用approve方法时触发。</p> -->
+          <h4 class="title">ERC20に基づいて編集されたトーカン契約</h4>
+          <pre class="code">
+pragma solidity ^0.4.16;
+contract Token{
+  uint256 public totalSupply;
+
+  function balanceOf(address _owner) public constant returns (uint256 balance);
+  function transfer(address _to, uint256 _value) public returns (bool success);
+  function transferFrom(address _from, address _to, uint256 _value) public returns (bool success);
+
+  function approve(address _spender, uint256 _value) public returns (bool success);
+
+  function allowance(address _owner, address _spender) public constant returns (uint256 remaining);
+
+  event Transfer(address indexed _from, address indexed _to, uint256 _value);
+  event Approval(address indexed _owner, address indexed _spender, uint256_value);
+}
+
+contract TokenDemo is Token {
+
+  string public name; //名称、例"My test token"
+  uint8 public decimals; //tokenが使用する小数点以下数位に戻り。例えば3に設定すれば、表示0.001を支持するということ。
+  string public symbol; //token略称like MTT
+
+  function TokenDemo(uint256 _initialAmount, string _tokenName, uint8 _decimalUnits, string _tokenSymbol) public {
+    totalSupply = _initialAmount * 10 ** uint256(_decimalUnits); // 初期総量を設置する
+    balances[msg.sender] = totalSupply; // メッセージ送信者に初期token数量を発送する、構造関数でもあり、契約の創始者でもある
+
+    name = _tokenName; 
+    decimals = _decimalUnits; 
+    symbol = _tokenSymbol;
+  }
+
+  function transfer(address _to, uint256 _value) public returns (bool success) {
+    //totalSupplyは最大値(2^256 - 1)を超えないと黙認する。
+    //時間が経つにつれて、新たなtokenが生成される場合、下のような異常の漏れを避けられる。
+    require(balances[msg.sender] >= _value && balances[_to] + _value > balances[_to]);
+    require(_to != 0x0);
+    balances[msg.sender] -= _value;//メッセージ送信者のアカウントからtoken数量をマイナス。
+    balances[_to] += _value;//受信者アカウントにtoken数量を増加。
+    Transfer(msg.sender, _to, _value);//トーカン交換の取引事件を触発する
+    return true;
+  }
+
+
+  function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
+    require(balances[_from] >= _value && allowed[_from][msg.sender] >= _value);
+    balances[_to] += _value;//受信者アカウントにtoken数量を増加。
+    balances[_from] -= _value; //支給アカウント_fromはtoken数量_valueをマイナス。
+    allowed[_from][msg.sender] -= _value;//メッセージ送信者はアカウント_fromから転送した数量が_valueマイナス。
+    Transfer(_from, _to, _value);//トーカン交換の取引事件を触発する
+    return true;
+  }
+  function balanceOf(address _owner) public constant returns (uint256 balance) {
+    return balances[_owner];
+  }
+
+
+  function approve(address _spender, uint256 _value) public returns (bool success) { 
+    allowed[msg.sender][_spender] = _value;
+    Approval(msg.sender, _spender, _value);
+    return true;
+  }
+
+  function allowance(address _owner, address _spender) public constant returns (uint256 remaining) {
+    return allowed[_owner][_spender];//允许_spender从_owner中转出的token数
+  }
+  mapping (address => uint256) balances;
+  mapping (address => mapping (address => uint256)) allowed;
+}</pre>
+          <!-- <p>代码不必过多的解释，注释都写得很清楚了。</p> -->
+          <p>ここで疑問があるかもしれませんが、基準としてname，totalSupplyは方法ではないのか、どうしてここで属性変数に定義されているのか？これは、solidityが自動的にpublic変数に同名のgetterインターフェースを生成するためである。</p>
+          <h4 class="title">配属テスト</h4>
+          <p>以下は、環境の配置テスト流れ</p>
+          <p>一 : solcjs或いはsolcで契約を編集する、図のように</p>
+          <img src="/dist/resources/images/code1.png" alt="">          
+          <p>二：下のコードを配置につけて実行する、編集を完成後token_abi値はabiファイルの内容になる </p>
+          <p>編集完成後token_abi値は二進法内容になる、すなわち、binファイルの内容になる：fromは配置契約のアドレスとして、このアカウントの残高を確保する。もし図一のようにミスがあった場合、アカウントのロックを解除する必要がある。 具体的に図二の操作を参考してください。</p>
+          <pre class="code">
+token_abi = [
+  {"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},
+  {"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},
+  {"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},
+  {"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},
+  {"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},
+  {"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},
+  {"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},
+  {"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},
+  {"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"remaining","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},
+  {"inputs":[{"name":"_initialAmount","type":"uint256"},{"name":"_tokenName","type":"string"},{"name":"_decimalUnits","type":"uint8"},{"name":"_tokenSymbol","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},
+  {"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},
+  {"indexed":false,"name":"_value","type":"uint256"}],"name":"Transfer","type":"event"},
+  {"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"},
+  {"indexed":true,"name":"_spender","type":"address"},
+  {"indexed":false,"name":"_value","type":"uint256"}],"name":"Approval","type":"event"}
+] 
+
+test_token = web3.eth.contract(token_abi) 
+token_code = '0x608060405234801561001057600080fd5b50604051610735380380610735833981016040908152815160208084015183850151606086015160ff8216600a0a85026000818155600160a060020a0333168152600486529690962095909555908501805193959094919391019161007a916001918601906100a7565b506002805460ff191660ff8416179055805161009d9060039060208401906100a7565b5050505050610142565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100e857805160ff1916838001178555610115565b82800160010185558215610115579182015b828111156101155782518255916020019190600101906100fa565b50610121929150610125565b5090565b61013f91905b80821115610121576000815560010161012b565b90565b6105e4806101516000396000f3006080604052600436106100985763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166306fdde03811461009d578063095ea7b31461012757806318160ddd1461015f57806323b872dd14610186578063313ce567146101b057806370a08231146101db57806395d89b41146101fc578063a9059cbb14610211578063dd62ed3e14610235575b600080fd5b3480156100a957600080fd5b506100b261025c565b6040805160208082528351818301528351919283929083019185019080838360005b838110156100ec5781810151838201526020016100d4565b50505050905090810190601f1680156101195780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561013357600080fd5b5061014b600160a060020a03600435166024356102e9565b604080519115158252519081900360200190f35b34801561016b57600080fd5b50610174610353565b60408051918252519081900360200190f35b34801561019257600080fd5b5061014b600160a060020a0360043581169060243516604435610359565b3480156101bc57600080fd5b506101c561043d565b6040805160ff9092168252519081900360200190f35b3480156101e757600080fd5b50610174600160a060020a0360043516610446565b34801561020857600080fd5b506100b2610461565b34801561021d57600080fd5b5061014b600160a060020a03600435166024356104bc565b34801561024157600080fd5b50610174600160a060020a036004358116906024351661058d565b60018054604080516020600284861615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156102e15780601f106102b6576101008083540402835291602001916102e1565b820191906000526020600020905b8154815290600101906020018083116102c457829003601f168201915b505050505081565b600160a060020a03338116600081815260056020908152604080832094871680845294825280832086905580518681529051929493927f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925929181900390910190a350600192915050565b60005481565b600160a060020a03831660009081526004602052604081205482118015906103a75750600160a060020a03808516600090815260056020908152604080832033909416835292905220548211155b15156103b257600080fd5b600160a060020a03808416600081815260046020908152604080832080548801905588851680845281842080548990039055600583528184203390961684529482529182902080548790039055815186815291519293927fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef9281900390910190a35060019392505050565b60025460ff1681565b600160a060020a031660009081526004602052604090205490565b6003805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156102e15780601f106102b6576101008083540402835291602001916102e1565b600160a060020a03331660009081526004602052604081205482118015906104fd5750600160a060020a038316600090815260046020526040902054828101115b151561050857600080fd5b600160a060020a038316151561051d57600080fd5b600160a060020a03338116600081815260046020908152604080832080548890039055938716808352918490208054870190558351868152935191937fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef929081900390910190a350600192915050565b600160a060020a039182166000908152600560209081526040808320939094168252919091522054905600a165627a7a7230582016464ed0c4d48736761517a8ae4c3f126efa298a7d5cfc6d819a7513ec3383ab0029' 
+
+instance = test_token.new({from: '0x547f0a45c12f9428e5aa060fb259c20616cd74a0', data: token_code, gas: 3000000}, function (e, contract){     
+  console.log(e, contract);     
+  if (typeof contract.address !== 'undefined') {          
+    console.log('Contract mined! address: ' + contract.address + ' transactionHash: ' + contract.transactionHash);     
+  }  
+})</pre>  
+          <img src="/dist/resources/images/code2.png" alt="">
+          <p class="text-center">図一</p>
+          <img src="/dist/resources/images/code3.png" alt="">    
+          <p class="text-center">図二</p>      
+          <p>三：配属の成功後、次のようなヒントが表示される。</p> 
+          <img src="/dist/resources/images/code4.png" alt="">
+        </div>
+    </main>
+    <div class="footer jp-footer">
+      <div class="container">
+        <img src="/dist/resources/images/bottomlogo.svg" alt="" class="footer-logo">
+        <div class="subscribe">
+          <div id="mc_embed_signup">
+            <form action="https://ethereumclassicasia.us18.list-manage.com/subscribe/post?u=cf36498d3fc32e7bc9dfc6052&amp;id=d898a0a72e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+                <div class="mc-field-group">
+                  <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="email">
+                </div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>                
+              </div>
+              <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+            </form>
+          </div>
+        </div>
+        <div class="footer-content row justify-content-start">
+          <div class="col-sm-3 resource-links">
+            <h4>資源</h4>
+            <ul>
+              <li><a href="javascript:;" id="whitePaper">白書</a></li>
+              <li><a href="javascript:;" id="guide">ETC案内</a></li>
+              <li><a href="javascript:;" id="faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 friend-links">
+            <h4>相関リンク</h4>
+            <ul>
+              <!-- <li><a href="#" target="_blank">ETC INCUBATOR</a></li> -->
+              <li><a href="https://www.etcdevteam.com" target="_blank">ETCDEV</a></li>
+              <li><a href="https://etccooperative.org" target="_blank">ECC</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3 social-links">
+            <ul>
+              <li>
+                <a href="javascript:;" target="_blank">@etcjapan</a>
+              </li>
+              <li>
+                <a href="https://t.me/joinchat/GqAqlRC9hD5bVy65DuHcfg" target="_blank">Telegram</a>
+              </li>
+              <li>
+                <a href="https://github.com/ethereumproject" target="_blank">Github</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/dist/js/vendor.min.js" ></script>
+  <script src="/dist/js/bundle-resource.min.js?v=1526539415614" ></script>
+  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+  <script type='text/javascript'>
+  (function($) {
+    window.fnames = new Array(); 
+    window.ftypes = new Array();
+    fnames[0]='EMAIL';
+    ftypes[0]='email';
+    fnames[1]='FNAME';
+    ftypes[1]='text';
+    fnames[2]='LNAME';
+    ftypes[2]='text';
+    fnames[3]='ADDRESS';
+    ftypes[3]='address';
+    fnames[4]='PHONE';
+    ftypes[4]='phone';
+  }(jQuery));
+  var $mcj = jQuery.noConflict(true);
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118864224-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-118864224-1');
+  </script>
+</html>

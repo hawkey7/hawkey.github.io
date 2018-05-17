@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>以太经典</title>
+
+    <!-- Bootstrap -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/dist/css/vendor.min.css" rel="stylesheet">
+    <link href="/dist/css/bundle-establish.min.css?v=1526539415614" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header id="header">
+      <div class="navbar-wrapper">
+        <div class="container">
+          <nav class="navbar navbar-expand-sm navbar-light">
+              <a class="navbar-brand" href="/"><img src="/dist/resources/images/toplogo.svg" alt="" class="header-logo"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/news/?lang=zh">新闻</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/forums/">论坛</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/resource/">资源</a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="language_box language_box-off">
+                      <img src="/dist/resources/images/ch.png" alt="">
+                      <svg width="13px" height="6px" viewBox="0 0 13 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="C_homepage-down" transform="translate(-1307.000000, -32.000000)" fill="#FFFFFF"><g id="Group-3" transform="translate(120.000000, 7.000000)"><polygon id="Triangle-2" transform="translate(1193.500000, 28.000000) scale(1, -1) translate(-1193.500000, -28.000000) " points="1193.5 25 1200 31 1187 31"></polygon></g></g></g></svg>
+                      <ul>
+                        <li><a href="/kr/purse/"><img src="/dist/resources/images/korea.jpeg" alt=""></a></li>
+                        <li><a href="/jp/purse/"><img src="/dist/resources/images/jp.jpeg" alt=""></a></li>
+                      </ul>
+                    </div>  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+        </div>
+      </div>
+    </header>
+    <main class="purse">
+        <div class="container">
+            <div class="top">
+              文档来源
+            </div>
+            <div class="content-wrapper">
+              <div class="purse_title"><a href="http://classicetherwallet.com" target="_blank">http://classicetherwallet.com</a> - ClassicEtherWallet.com的内容直接由github提供。</div>  
+              <div class="purse_content">
+                <h3>ClassicEtherWallet</h3>
+                <p>ClassicEtherWallet是一个开源的，基于JavaScript语言，用于生成ETC钱包的客户端工具。</p>
+                <ul>
+                  <li>官方链接：<a href="http://classicetherwallet.com" target="_blank">http://classicetherwallet.com</a></li>
+                  <li>github链接：<a href="https://ethereumproject.github.io/etherwallet/" target="_blank">https://ethereumproject.github.io/etherwallet/</a></li>
+                </ul>
+                <h3>目标</h3>
+                <p>创建ClassicEtherWallet是因为普通用户在使用命令行客户端时会有很大麻烦。因此，创建这个基于浏览器的用户界面钱包是为了：</p>
+                <ul>
+                  <li>导入客户钱包文件和密钥文件</li>
+                  <li>生成完整的钱包客户端并提供原始私钥、JSON文件和帐户的纸质版本</li>
+                  <li>批量生成钱包</li>
+                  <li>生成和发送交易</li>
+                  <li>我们希望它能帮助大多数人完成日常任务而不需要运行完整的客户端</li>
+                </ul>
+                <p>第2版基于这些愿景提供了以下特性：</p>
+                <ul>
+                  <li>生成并发送离线交易，确保您的私钥永远不会泄露。</li>
+                  <li>在标准发送交易选项中包含自定义的gas和数据。</li>
+                  <li>用Angular重写，以便更容易地更新和维护。</li>
+                  <li>基于不同案例的代币众筹支持（Digix,Slock.it等）</li>
+                  <li>新的加密方法，以匹配geth/ Mist密钥存储格式（V3），使ClassicEtherWallet和Mist之间的资产转移变得更加容易。</li>
+                  <li>离线交易页上的QR代码，便于在计算机之间传输。</li>
+                  <li>能够生成一个定制的链接，连接到一个预先定义的交易页面，页面上已填写发送地址、金额、数据和gas，用户只须解锁他们的钱包并按下发送按钮。</li>
+                </ul>
+                <h3>开发者</h3>
+                <p>如果你想参与其中，你需要知道如下事项</p>
+                <ul>
+                  <li>Chrome扩展程序和ClassicEtherWallet.com都是从同一个代码库编译的，代码可在app文件夹中找到的。不要更改。<span>dist</span>和<span>chrome-extension</span>文件夹</li>
+                  <li>我们使用Angular和Bootstrap。在2016年4月份之前，我们使用的是jQuery和Bootstrap。这也是为什么你会感到有些设置是时髦的。</li>
+                  <li>Mercury分支是目前开发的活跃分支。开发完成后我们将dist文件夹推到gh页面，以更新运行ClassicEtherWallet.com。</li>
+                  <li>我们使用npm/gulp进行编译，编译中会涉及很多内容。</li>
+                  <li>旧节点的设置可以在<span>json_relay_node</span>（node.js）和<span>json_relay_php</span>（PHP）（PHP）中找到。 在$40的linnode实例上有丰富的资源以供开发人员参考，启动和运行公共节点。</li>
+                </ul>
+                <p>让我们开始吧</p>
+                <ul>
+                  <li>从运行<span>npm</span> install 开始。</li>
+                  <li>运行<span>npm run dev</span>。 Gulp将观察并编译所有的东西，然后观察HTML、JS和CSS的变化。</li>
+                  <li><span>运行npm run dist</span>进行部署。</li>
+                </ul>
+                <p>文件夹结构</p>
+                <ul>
+                  <li><span>fonts</span>和<span>images</span>被移动到各自的文件夹中。如需添加图片或字体你必须重新运行gulp，因为这两种格式的文件不会自动被编译。</li>
+                  <li><span>includes</span>文件夹包含页面的部分和页面本身。这些文件都是十分明显的，在这里你可以做大部分的前端更改。</li>
+                  <li><span>layouts</span>文件夹是页面本身。基本上把所有的页面编译成了一个大的页面。导航栏也可以在这里找到，例如
+                    <ul>
+                      <li>index.html 显示了https://ethereumproject.github.io/etherwallet/</li>
+                      <li><span>cx-wallet.html</span>是Chrome扩展程序的主要页面。</li>
+                      <li>embedded.html  显示了https://ethereumproject.github.io/etherwallet/embedded.html。</li>
+                    </ul>
+                  </li>
+                  <li>通过使用方法: <span>@@if (site === 'cx' ) { ... }</span> 和 <span>@@if (site === 'mew' ) { ... }</span>.你可以控制<span>ClassicEtherWallet.com</span>对Chrome扩展的显示,通过<span>sendTransaction.tpl</span>可以查看它的行为。前者只会编译到Chrome扩展程序，而后者只会编译到ClassicEtherWallet.com。</li>
+                  <li><span>embedded.html</span>用于将钱包生成嵌入到第三方网站。</li>
+                  <li>钱包解密指令在 <span>scripts/directives/walletDecryptDrtv.js</span>中，这些出现在许多页面上。</li>
+                  <li>导览在 <span>scripts/services/globalServices.js</span>。我们通过这个文件控制哪些导览项应该显示在该网站的哪些版本中。</li>
+                  <li>截至2016年9月，几乎所有.tpl文件中的拷贝仅作为占位符存在。它被Angular-translate所取代。如果您想更改一些副本，则需要在scripts/translations/en.js的文件夹中做。你还应该记录一下你所更改的内容并将其移到文件的顶部，这样我们就可以确保它在必要时被翻译。</li>
+                  <li>Styles则更不用说了，它包含了一些自定义文件夹和引导程序。这急需被重做！</li>
+                </ul>
+                <h3>联系我们</h3>
+                <p>如果你能想到任何其他的特点或着运行中遇到错误，请联系我们。</p>
+              </div>
+            </div>
+        </div>
+    </main>
+    <div class="footer">
+      <div class="container">
+        <img src="/dist/resources/images/bottomlogo.svg" alt="" class="footer-logo">
+        <div class="subscribe">
+          <div id="mc_embed_signup">
+            <form action="https://ethereumclassicasia.us18.list-manage.com/subscribe/post?u=cf36498d3fc32e7bc9dfc6052&amp;id=d898a0a72e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+                <div class="mc-field-group">
+                  <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="email">
+                </div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>                
+              </div>
+              <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+            </form>
+          </div>
+        </div>
+        <div class="footer-content row justify-content-start">
+          <div class="col-sm-3 resource-links">
+            <h4>资源</h4>
+            <ul>
+              <li><a href="javascript:;" id="whitePaper">白皮书</a></li>
+              <li><a href="javascript:;" id="guide">ETC指南</a></li>
+              <li><a href="javascript:;" id="faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 friend-links">
+            <h4>友情链接</h4>
+            <ul>
+              <!-- <li><a href="#" target="_blank">ETC INCUBATOR</a></li> -->
+              <li><a href="https://www.etcdevteam.com" target="_blank">ETCDEV</a></li>
+              <li><a href="https://etccooperative.org" target="_blank">ECC</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3 social-links">
+            <ul>
+              <li>
+                <a href="javascript:;" class="qrcode">微信公众号 ETC_Community</a>
+                <div class="qr-dropdown">
+                  <img src="/dist/resources/images/qrcode.jpeg" alt="">
+                </div>
+              </li>
+              <li>
+                <a href="javascript:;" class="qrcode">微信群助手微信号</a>
+                <div class="qr-dropdown">
+                  <img src="/dist/resources/images/qrcode2.jpeg" alt="">
+                </div>
+              </li>
+              <li>
+                <a href="javascript:;">官方QQ群 769408114</a>
+              </li>
+              <li>
+                <a href="http://t.me/etczh" target="_blank">Telegram</a>
+              </li>
+              <li>
+                <a href="https://github.com/ethereumproject" target="_blank">Github</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/dist/js/vendor.min.js" ></script>
+  <script src="/dist/js/bundle-resource.min.js?v=1526539415614" ></script>
+  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+  <script type='text/javascript'>
+  (function($) {
+    window.fnames = new Array(); 
+    window.ftypes = new Array();
+    fnames[0]='EMAIL';
+    ftypes[0]='email';
+    fnames[1]='FNAME';
+    ftypes[1]='text';
+    fnames[2]='LNAME';
+    ftypes[2]='text';
+    fnames[3]='ADDRESS';
+    ftypes[3]='address';
+    fnames[4]='PHONE';
+    ftypes[4]='phone';
+  }(jQuery));
+  var $mcj = jQuery.noConflict(true);
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118864224-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-118864224-1');
+  </script>
+</html>
